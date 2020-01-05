@@ -1,0 +1,60 @@
+@charset "UTF-8";
+@import "../common/var";
+@import "../common/mixins";
+
+
+@include setName(button) {
+    display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    background: $button-background-color-base;
+    border: $button-border-base;
+    color: $button-font-color-base;
+    text-align: center;
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    transition: 0.1s;
+    user-select: none;
+    font-weight: $button-font-weight-base;
+    padding: $button-padding-horizontal-base $button-padding-vertical-base;
+    font-size: $button-font-size-base;
+    border-radius: $button-border-radius-base;
+    &:hover, &:focus {
+        color: $color-primary;
+        border-color: $color-primary-light-7;
+        background-color: $color-primary-light-9;
+    }
+    &:active {
+        color: mix($color-black, $color-primary, 10%);
+        border-color: mix($color-black, $color-primary, 10%);
+        outline: none;
+    }
+
+    @include tiedWhen(disabled) {
+        &, &:hover, &:focus {
+            color: $button-disabled-font-color;
+            cursor: not-allowed;
+            background-image: none;
+            background-color: $button-disabled-background-color;
+            border-color: $button-disabled-border-color;
+        }
+    }
+
+    @include tiedName(button_primary) {
+        @include setButtonStyle($button-background-color-primary, $button-font-color-primary, $button-border-primary)
+    }
+
+    @include tiedName(button_success) {
+        @include setButtonStyle($button-background-color-success, $button-font-color-success, $button-border-success)
+    }
+
+    @include tiedName(button_warning) {
+        @include setButtonStyle($button-background-color-warning, $button-font-color-warning, $button-border-warning)
+    }
+
+    @include tiedName(button_danger) {
+        @include setButtonStyle($button-background-color-danger, $button-font-color-danger, $button-border-danger)
+    }
+}
