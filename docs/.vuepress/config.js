@@ -7,16 +7,22 @@ module.exports = {
     // baseUrl
     base: '/haven-ui/',
     // 注入到当前页面的HTML <head> 标签
-    head: [],
+    head: [
+        ['link', {rel: 'icon', href: '/logo.png'}]
+    ],
     // 端口
     port: 8080,
     //主题配置
     themeConfig: {
+        // logo
+        logo: '/logo.png',
+        // search
+        search: false,
         // 顶部导航栏
         nav: [
-            { text: 'Home', link: '/' },
-            { text: 'Components', link: 'views/'},
-            { text: 'Github', link: 'https://github.com/Jarhowe/Haven-UI/'}
+            { text: '首页', link: '/' },
+            { text: '组件', link: 'views/guide/install.html'},
+            { text: '作者Github', link: 'https://github.com/Jarhowe'}
         ],
         // 这里使用的是多个侧边栏设置
         sidebar: [

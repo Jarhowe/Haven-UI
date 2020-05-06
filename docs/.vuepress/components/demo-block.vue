@@ -1,8 +1,8 @@
 <template>
     <div class="demo-item">
-        <h3 class="title">
-            <slot name="demo-title"></slot>
-        </h3>
+        <title-block>
+            <slot slot="title-block" name="demo-title"></slot>
+        </title-block>
         <!-- 组件展示 -->
         <div class="demo-block" :class="[blockClass, {'demo-block_hover': hovering}]">
             <!-- 组件模块预览 -->
@@ -14,9 +14,9 @@
                 <!-- 组件描述 -->
                 <slot name="component-remark"></slot>
                 <!-- 组件示例 -->
-                <div class="highlight">
-                    <slot name="component-code"></slot>
-                </div>
+                <code-block>
+                    <slot slot="code-block" name="component-code"></slot>
+                </code-block>
             </div>
             <!-- 组件代码控制（显示/隐藏） -->
             <div class="demo-component_footer" ref="footer"  @click="isExpanded = !isExpanded">
@@ -27,8 +27,13 @@
 </template>
 
 <script>
+import titleBlock from './demo-title'
+import codeBlock from './demo-code'
 export default {
     name: 'demoBlock',
+    components: {
+        codeBlock, titleBlock
+    },
     data() {
         return {
             hovering: false,
@@ -105,18 +110,6 @@ export default {
 <style lang="scss" scoped>
 .demo-item {
     margin-bottom: 30px;
-    .title {
-        font-size: 22px;
-        font-weight: 400;
-        color: #1f2f3d;
-        margin: 55px 0 20px;
-        &::before {
-            content: "&";
-            color: #409eff;
-            margin: 0 5px;
-            font-weight: bold;
-        }
-    }
 }
 .demo-block {
     border: 1px solid #ebebeb;
@@ -146,23 +139,11 @@ export default {
             background-color: #ffffff;
             border-bottom: 1px solid #eaeefb;
         }
-        div[class*="language-"] {
-            border-radius: 0;
-            background-color: #fafafa;
-            .token.tag, .token.attr-name, .token.namespace, .token.deleted {
-                color: #3182bd;
-            }
-            .token.string, .token.char, .token.attr-value, .token.regex, .token.variable {
-                color: #756bb1;
-            }
-            code {
-                color: #000000;
-            }
-        }
-        
-       
     }
-
+    .code-block {
+        border: none;
+        border-radius: 0;
+    }
     .demo-component_footer {
         border-top: 1px solid #eaeefb;
         height: 40px;

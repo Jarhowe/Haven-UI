@@ -4,10 +4,10 @@
   "private": true,
   "description": "基于Vue的pc端UI组件库",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "test": "vue-cli-service serve",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "deploy": "bash deploy.sh"
   },
   "dependencies": {
     "core-js": "^3.4.3",

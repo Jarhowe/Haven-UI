@@ -1,11 +1,10 @@
 // 1.导入组件
 import Button from './button'
-import Upload from './upload'
 
 
 // 2.定义组件列表
 const components = [
-    Button, Upload
+    Button
 ]
 
 const install = function(vm) {
@@ -24,8 +23,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 export default {
     install,
-    Button,
-    Upload
+    Button
 };
 
 /**

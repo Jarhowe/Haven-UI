@@ -1,7 +1,6 @@
 <template>
     <div class="render-test">
         <ha-button type="primary">按钮1</ha-button>
-        <ha-upload v-model="fileList"></ha-upload>
     </div>
 </template>
 
