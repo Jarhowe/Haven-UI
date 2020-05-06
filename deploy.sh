@@ -13,6 +13,6 @@ cd docs/.vuepress/dist
 git pull https://github.com/Jarhowe/Haven-UI.git master
 git add -A
 git commit -m 'deploy'
-git push -f https://github.com/Jarhowe/Haven-UI.git master
+git push -f https://github.com/Jarhowe/Haven-UI.git master:gh-pages
 
 cd -
