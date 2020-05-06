@@ -2,7 +2,7 @@
   "name": "Haven-UI",
   "version": "1.0.0",
   "private": true,
-  "description": "基于Vue的pc端UI组件库",
+  "description": "基于Vuepress搭建PC端UI组件库: https://jarhowe.github.io/Haven-UI",
   "scripts": {
     "test": "vue-cli-service serve",
     "docs:dev": "vuepress dev docs",

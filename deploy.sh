@@ -10,7 +10,7 @@ npm run docs:build
 cd docs/.vuepress/dist
 
 # 拉取最新代码
-git pull https://github.com/Jarhowe/Haven-UI.git master
+git init
 git add -A
 git commit -m 'deploy'
 git push -f https://github.com/Jarhowe/Haven-UI.git master:gh-pages

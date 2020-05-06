@@ -1,11 +1,10 @@
 const path = require('path');
 module.exports = {
+    base: '/Haven-UI/',
     // 标题
     title: 'Haven UI',
     // 描述
     description: '基于Vue打造UI组件库文档',
-    // baseUrl
-    base: '/haven-ui/',
     // 注入到当前页面的HTML <head> 标签
     head: [
         ['link', {rel: 'icon', href: '/logo.png'}]
