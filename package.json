@@ -1,14 +1,19 @@
 {
-  "name": "Haven-UI",
+  "name": "haven-ui",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
   "description": "基于Vuepress搭建PC端UI组件库: https://jarhowe.github.io/Haven-UI",
   "scripts": {
-    "test": "vue-cli-service serve",
+    "local:dev": "cross-env NODE_ENV=development vue-cli-service serve",
+    "build:prod": "cross-env NODE_ENV=production vue-cli-service build",
+    "build:lib": "cross-env NODE_ENV=production vue-cli-service build --target lib --name haven-ui --dest lib packages/index.js",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "deploy": "bash deploy.sh"
   },
+  "main": "lib/haven-ui.umd.min.js",
+  "author": "Jarhowe",
+  "license": "MIT",
   "dependencies": {
     "core-js": "^3.4.3",
     "element-ui": "^2.13.0",
@@ -24,6 +29,7 @@
     "@vue/cli-plugin-vuex": "^4.1.0",
     "@vue/cli-service": "^4.1.0",
     "babel-plugin-component": "^1.1.1",
+    "cross-env": "^7.0.2",
     "node-sass": "^4.12.0",
     "sass-loader": "^8.0.0",
     "vue-highlightjs": "^1.3.3",
