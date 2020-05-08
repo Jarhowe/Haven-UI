@@ -14,7 +14,7 @@
 </template>
 <template #component-remark>
     <div class="description">
-        <p>使用type、plain、round和circle属性来定义 Button 的样式。</p>
+        <p>使用type属性来定义 Button 的样式。</p>
     </div>
 </template>
 <template #component-code>
@@ -29,6 +29,8 @@
 </template>
 </demo-block>
 </template>
+
+
 
 <template>
 <demo-block>
@@ -57,4 +59,70 @@
 </template>
 </demo-block>
 </template>
+
+
+<template>
+<demo-block>
+<template #demo-title>文字按钮</template>
+<template #component-body>
+    <ha-button type="text">文字按钮</ha-button>
+    <ha-button type="text" disabled>文字按钮</ha-button>
+    <ha-button type="text" size="medium">文字按钮</ha-button>
+    <ha-button type="text" size="small">文字按钮</ha-button>
+    <ha-button type="text" size="mini">文字按钮</ha-button>
+</template>
+<template #component-remark>
+    <div class="description">
+        <p>没有边框和背景颜色的按钮</p>
+    </div>
+</template>
+<template #component-code>
+
+```vue
+<ha-button type="text">文字按钮</ha-button>
+<ha-button type="text" disabled>文字按钮</ha-button>
+<ha-button type="text" size="medium">文字按钮</ha-button>
+<ha-button type="text" size="small">文字按钮</ha-button>
+<ha-button type="text" size="mini">文字按钮</ha-button>
+```
+</template>
+</demo-block>
+</template>
+
+
+
+<template>
+<demo-block>
+<template #demo-title>不同尺寸</template>
+<template #component-body>
+    <ha-button>默认按钮</ha-button>
+    <ha-button size="medium">中等按钮</ha-button>
+    <ha-button size="small">小型按钮</ha-button>
+    <ha-button size="mini">超小按钮</ha-button>
+</template>
+<template #component-remark>
+    <div class="description">
+        <p>额外的尺寸：medium、small、mini，通过设置size属性来配置它们。</p>
+    </div>
+</template>
+<template #component-code>
+
+```vue
+<ha-button>默认按钮</ha-button>
+<ha-button size="medium">中等按钮</ha-button>
+<ha-button size="small">小型按钮</ha-button>
+<ha-button size="mini">超小按钮</ha-button>
+```
+</template>
+</demo-block>
+</template>
 </ClientOnly>
+
+### 属性
+|  参数  | 类型  |  说明  | 可选值 | 默认值 |
+| :-----| :---- | :---- | :---- | :---- |
+| type | String | 类型 | primary、success、warning、danger、text | -
+| size | String | 大小 | medium、small、mini | -
+| disabled | Boolean | 禁用 | | false
+| native-type | String | 原生 type 属性 | button、submit、reset |button
+| autofocus | Boolean | 页面加载时给按钮自动获取焦点 | | false

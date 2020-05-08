@@ -2,59 +2,126 @@
 @import "../common/var";
 @import "../common/mixins";
 
+// 按钮
+// ===== type ====
+@mixin setButtonStyle($backgroundColor, $color, $borderColor){
+    color: $color;
+    border-color: $borderColor;
+    background-color: $backgroundColor;
+    &:hover, &:focus {
+        color: $color;
+        border-color: mix($color-white, $borderColor, 20%);
+        background-color:mix($color-white, $backgroundColor, 20%);
+    }
+    &:active {
+        color: $color;
+        border-color: mix($color-black, $borderColor, 10%);
+        background-color: mix($color-black, $backgroundColor, 10%);
+        outline: none;
+    }
+    &.is_disabled {
+        &, &:hover, &:focus, &:active {
+            color: $color-white;
+            background-color: mix($backgroundColor, $color-white);
+            border-color: mix($borderColor, $color-white);
+        }
+    }
+}
+
+@mixin setButtonSize($padding, $fontSize){
+    padding: $padding;
+    font-size: $fontSize;
+}
 
 @include setName(button) {
     display: inline-block;
     line-height: 1;
     white-space: nowrap;
     cursor: pointer;
-    background: $button-background-color-base;
-    border: $button-border-base;
-    color: $button-font-color-base;
+    background: #ffffff;
+    border: 1px solid #dedfe6;
+    color: #606266;
     text-align: center;
     box-sizing: border-box;
     outline: none;
     margin: 0;
     transition: 0.1s;
     user-select: none;
-    font-weight: $button-font-weight-base;
-    padding: $button-padding-horizontal-base $button-padding-vertical-base;
-    font-size: $button-font-size-base;
-    border-radius: $button-border-radius-base;
+    font-weight: 500;
+    padding: 12px 20px;
+    font-size: 14px;
+    border-radius: 4px;
     &:hover, &:focus {
-        color: $color-primary;
-        border-color: $color-primary-light-7;
-        background-color: $color-primary-light-9;
+        color: $default-color;
+        border-color: mix($color-white, $default-color, 70%);
+        background-color: mix($color-white, $default-color, 90%);
     }
     &:active {
-        color: mix($color-black, $color-primary, 10%);
-        border-color: mix($color-black, $color-primary, 10%);
+        color: mix($color-black, $default-color, 10%);
+        border-color: mix($color-black, $default-color, 10%);
         outline: none;
     }
 
+    // 禁用 - 置灰
     @include tiedWhen(disabled) {
         &, &:hover, &:focus {
-            color: $button-disabled-font-color;
+            color: $color-disabled;
             cursor: not-allowed;
             background-image: none;
-            background-color: $button-disabled-background-color;
-            border-color: $button-disabled-border-color;
+            background-color: $color-white;
+            border-color: #ebeef5;
         }
     }
+}
 
-    @include tiedName(button_primary) {
-        @include setButtonStyle($button-background-color-primary, $button-font-color-primary, $button-border-primary)
+// ---- type ----
+// button_primary
+@include tiedName(button_primary) {
+    @include setButtonStyle($default-background-color-primary, $default-font-color-primary, $default-border-color-primary)
+}
+// button_success
+@include tiedName(button_success) {
+    @include setButtonStyle($default-background-color-success, $default-font-color-success, $default-border-color-success)
+}
+// button_warning
+@include tiedName(button_warning) {
+    @include setButtonStyle($default-background-color-warning, $default-font-color-warning, $default-border-color-warning)
+}
+// button_danger
+@include tiedName(button_danger) {
+    @include setButtonStyle($default-background-color-danger, $default-font-color-danger, $default-border-color-danger)
+}
+// button_text
+@include tiedName(button_text) {
+    @include setButtonStyle(transparent, $default-color, transparent);
+    padding-left: 0;
+    padding-right: 0;
+    &.is_disabled {
+        &, &:hover, &:focus, &:active {
+            color: $color-disabled;
+        }
     }
+    &:hover, &:focus {
+        color: mix($color-white, $default-color, 20%);
+        border-color: transparent;
+        background-color: transparent;
+    }
+    &:active {
+        border-color: transparent;
+        background-color: transparent;
+    }
+}
 
-    @include tiedName(button_success) {
-        @include setButtonStyle($button-background-color-success, $button-font-color-success, $button-border-success)
-    }
-
-    @include tiedName(button_warning) {
-        @include setButtonStyle($button-background-color-warning, $button-font-color-warning, $button-border-warning)
-    }
-
-    @include tiedName(button_danger) {
-        @include setButtonStyle($button-background-color-danger, $button-font-color-danger, $button-border-danger)
-    }
+// ---- size ----
+@include tiedName(button_medium) {
+    @include setButtonSize($default-size-medium-padding, $default-size-medium-fontSize);
+    border-radius: 4px;
+}
+@include tiedName(button_small) {
+    @include setButtonSize($default-size-small-padding, $default-size-small-fontSize);
+    border-radius: 3px;
+}
+@include tiedName(button_mini) {
+    @include setButtonSize($default-size-mini-padding, $default-size-mini-fontSize);
+    border-radius: 3px;
 }

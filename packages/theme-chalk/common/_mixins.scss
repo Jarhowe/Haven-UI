@@ -3,14 +3,24 @@
 $namespace: 'ha';
 
 @mixin setName($class) {
-    $SETNAME: $namespace + '-' + $class !global;
+    $SETNAME: $namespace + '-' + $class !global; // 调用全局变量
     .#{$SETNAME} {
         @content;
     }
 }
 
+
 @mixin tiedName($class) {
     $TIEDNAME: $namespace + '-' + $class;
+    @at-root {
+        &.#{$TIEDNAME} {
+            @content;
+        }
+    }
+}
+
+@mixin sizeName($class) {
+    $TIEDNAME: $namespace + '_' + $class;
     @at-root {
         &.#{$TIEDNAME} {
             @content;
@@ -25,34 +35,4 @@ $namespace: 'ha';
             @content;
         }
     }
-}
-
-@mixin setButtonStyle($backgroundColor, $color, $borderColor){
-    color: $color;
-    border-color: $borderColor;
-    background-color: $backgroundColor;
-    &:hover, &:focus {
-        color: $color;
-        border-color: mix($color-white, $borderColor, 20%);
-        background-color:mix($color-white, $backgroundColor, 20%);
-    }
-    &:active {
-        color: $color;
-        border-color: mix($color-black, $borderColor, 10%);
-        background-color: mix($color-black, $backgroundColor, 10%);
-        outline: none;
-    }
-    &.is_disabled {
-        &, &:hover, &:focus, &:active {
-            color: $color-white;
-            background-color: mix($backgroundColor, $color-white);
-            border-color: mix($borderColor, $color-white);
-        }
-    }
-}
-
-@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $border-radius) {
-    padding: $padding-vertical $padding-horizontal;
-    font-size: $font-size;
-    border-radius: $border-radius;
 }

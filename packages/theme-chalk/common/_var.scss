@@ -1,66 +1,38 @@
 // Color
-$color-primary: #409EFF !default;
-$color-white: #FFFFFF !default;
+$default-color: #0f96dc !default;
+$color-white: #ffffff !default;
 $color-black: #000000 !default;
-$color-primary-light-1: mix($color-white, $color-primary, 10%) !default; /* 53a8ff */
-$color-primary-light-2: mix($color-white, $color-primary, 20%) !default; /* 66b1ff */
-$color-primary-light-3: mix($color-white, $color-primary, 30%) !default; /* 79bbff */
-$color-primary-light-4: mix($color-white, $color-primary, 40%) !default; /* 8cc5ff */
-$color-primary-light-5: mix($color-white, $color-primary, 50%) !default; /* a0cfff */
-$color-primary-light-6: mix($color-white, $color-primary, 60%) !default; /* b3d8ff */
-$color-primary-light-7: mix($color-white, $color-primary, 70%) !default; /* c6e2ff */
-$color-primary-light-8: mix($color-white, $color-primary, 80%) !default; /* d9ecff */
-$color-primary-light-9: mix($color-white, $color-primary, 90%) !default; /* ecf5ff */
+$color-disabled: #c0c4cc !default;
 
-// Border
-$border-width: 1px !default;
-$border-style: solid !default;
-$border-color: #dedfe6 !default;
-$border-base: $border-width $border-style $border-color !default;
-$border-radius-base: 4px !default;
-
-
-// Font
-// font-size
-$font-size-mini: 12px !default; // mini
-$font-size-small: 13px !default; // small
-$font-size-base: 14px !default; // default
-$font-size-medium: 16px !default; // medium
-
-// font-color
-$font-color-base: #606266 !default;
-
-// font-weight
-$font-weight-base: 500 !default;
-
-        
-// Button
-// -- base --
-$button-background-color-base: $color-white !default;
-$button-border-base: $border-base;
-$button-font-color-base: $font-color-base !default;
-$button-font-weight-base: $font-weight-base !default; // 500
-$button-font-size-base: $font-size-base !default; //14px;
-$button-border-radius-base: $border-radius-base !default;
-$button-padding-vertical-base: 20px !default;
-$button-padding-horizontal-base: 12px !default;
+// Type
 // -- primary --
-$button-background-color-primary: $color-primary !default;
-$button-border-primary: $color-primary !default;
-$button-font-color-primary: $color-white !default;
+$default-background-color-primary: $default-color !default;
+$default-border-color-primary: $default-color !default;
+$default-font-color-primary: $color-white !default;
 // -- surress --
-$button-background-color-success: #67c23a !default;
-$button-border-success: #67c23a !default;
-$button-font-color-success: $color-white !default;
+$default-background-color-success: #67c23a !default;
+$default-border-color-success: #67c23a !default;
+$default-font-color-success: $color-white !default;
 // -- warning --
-$button-background-color-warning: #e6a23c !default;
-$button-border-warning: #e6a23c !default;
-$button-font-color-warning: $color-white !default;
+$default-background-color-warning: #e6a23c !default;
+$default-border-color-warning: #e6a23c !default;
+$default-font-color-warning: $color-white !default;
 // -- danger --
-$button-background-color-danger: #f56c6c !default;
-$button-border-danger: #f56c6c !default;
-$button-font-color-danger: $color-white !default;
+$default-background-color-danger: #f56c6c !default;
+$default-border-color-danger: #f56c6c !default;
+$default-font-color-danger: $color-white !default;
 // -- disabled --
-$button-disabled-background-color: $color-white !default;
-$button-disabled-border-color: #ebeef5 !default;
-$button-disabled-font-color: #c0c4cc !default;
+$default-disabled-background-color: $color-white !default;
+$default-disabled-border-color: #ebeef5 !default;
+$default-disabled-font-color: #c0c4cc !default;
+
+// Size
+// -- medium --
+$default-size-medium-padding: 10px 20px !default;
+$default-size-medium-fontSize: 14px !default;
+// -- small --
+$default-size-small-padding: 9px 15px !default;
+$default-size-small-fontSize: 12px !default;
+// -- mini --
+$default-size-mini-padding: 7px 15px !default;
+$default-size-mini-fontSize: 12px !default;

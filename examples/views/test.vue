@@ -1,6 +1,9 @@
 <template>
     <div class="render-test">
-        <ha-button type="primary">按钮1</ha-button>
+        <ha-button type="text" size="medium">按钮1</ha-button>
+        <ha-button type="text" size="small">按钮2</ha-button>
+        <ha-button type="text" size="mini">按钮3</ha-button>
+        <ha-button type="text" size="mini" disabled>按钮3</ha-button>
     </div>
 </template>
 

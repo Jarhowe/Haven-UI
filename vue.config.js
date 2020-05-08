@@ -38,7 +38,7 @@ module.exports = {
     // 路径别名
     configureWebpack: {
         resolve: {
-            extensions: ['.js', '.vue', '.json'],
+            extensions: ['.js', '.jsx', '.vue', '.json'],
             alias: {
                 '@': resolve('./examples')
             }

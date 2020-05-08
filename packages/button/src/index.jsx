@@ -1,14 +1,13 @@
-<script type="text/jsx">
 export default {
     name: 'haButton',
     props: {
         // 类型
         type: {
             type: String,
-            default: 'default' // default [默认] / primary [主要] / success [成功] / warning [警告] / danger [取消] / info [信息] / text [文本]
+            default: 'default' // default [默认]、primary [主要]、success [成功]、warning [警告]、danger [取消]、text [文本]
         },
         // 大小
-        size: String,
+        size: String, // medium、small、mini
         // 按钮原生type属性
         nativeType: {
             type: String,
@@ -30,14 +29,17 @@ export default {
         }
     },
     render(h) {
-        let {type, size, nativeType, disabled, loading, autofocus, buttonDisabled, buttonSize} = this;
+        const {type, nativeType, loading, autofocus, buttonDisabled, buttonSize} = this;
         return h('button', {
             domProps: {
                 type: nativeType,
                 autofocus: autofocus,
                 disabled: buttonDisabled || loading
             },
-            class: ['ha-button', type ? 'ha-button_' + type : '', buttonSize ? 'ha-button_' + buttonSize : '',
+            class: [
+                'ha-button', 
+                type ? 'ha-button_' + type : '',
+                buttonSize  ? 'ha-button_' + buttonSize : '',
                 { 
                     'is_disabled': buttonDisabled, 
                     'is_loading': loading 
@@ -51,4 +53,3 @@ export default {
         ])
     }
 }
-</script>

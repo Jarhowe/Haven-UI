@@ -25,14 +25,3 @@ export default {
     install,
     Button
 };
-
-/**
- * 使用：
- *  1. 引入所有组件
- *  import HavenUI from '../packages/index';
- *  Vue.use(HavenUI)
- * 
- *  2. 按需要引入
- *  import {Button} from '../packages/index';
- *  Vue.use(Button);
- */
