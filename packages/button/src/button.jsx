@@ -1,3 +1,4 @@
+// button
 export default {
     name: 'haButton',
     props: {

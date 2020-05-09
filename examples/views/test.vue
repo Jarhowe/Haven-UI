@@ -4,6 +4,13 @@
         <ha-button type="text" size="small">按钮2</ha-button>
         <ha-button type="text" size="mini">按钮3</ha-button>
         <ha-button type="text" size="mini" disabled>按钮3</ha-button>
+        <hr/>
+        <ha-row type="flex" justify="space-around" gutter="15">
+            <h1>Hello</h1>
+            <h1>Hello</h1>
+            <h1>Hello</h1>
+            <h1>Hello</h1>
+        </ha-row>
     </div>
 </template>
 

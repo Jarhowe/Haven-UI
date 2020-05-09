@@ -7,11 +7,11 @@ import 'element-ui/lib/theme-chalk/index.css';
 import HaElement from '../packages/index'
 import '../packages/theme-chalk/index.scss'
 // 完整引入
-// Vue.use(HaElement);
+Vue.use(HaElement);
 
 // 按需引入
-const {Button} = HaElement;
-Vue.use(Button)
+// const {Button} = HaElement;
+// Vue.use(Button)
 
 Vue.config.productionTip = false
 

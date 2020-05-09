@@ -28,6 +28,7 @@ $namespace: 'ha';
     }
 }
 
+// is_xxxx
 @mixin tiedWhen($name) {
     $TIEDWHEN: 'is' + '_' + $name;
     @at-root {

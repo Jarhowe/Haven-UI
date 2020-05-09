@@ -1,0 +1,46 @@
+@charset "UTF-8";
+@import "../common/var";
+@import "../common/mixins";
+
+
+@include setName(row) {
+    position: relative;
+    display: block;
+    height: auto;
+    margin-right: 0;
+    margin-left: 0;
+    box-sizing: border-box;
+    // before: table类型能生成独立的bfc，防止上边距塌陷
+    &::before, &::after {
+        content: "";
+        display: table;
+    }
+    // after 负责清除浮动，防止父级高度塌陷；配合使用，代码少，效率高
+    &::after {
+        content: "";
+        clear: both;
+    }
+    // flex
+    @include tiedName(row_flex) {
+        display: flex;
+    }
+    // is-xxxx
+    @include tiedWhen(justify_center) {
+        justify-content: center;
+    }
+    @include tiedWhen(justify_end) {
+        justify-content: flex-end
+    }
+    @include tiedWhen(justify_space-between) {
+        justify-content: space-between;
+    }
+    @include tiedWhen(justify_space-around) {
+        justify-content: space-around;
+    }
+    @include tiedWhen(align-middle) {
+        align-items: center;
+    }
+    @include tiedWhen(align-bottom) {
+        align-items: flex-end;
+    }
+}
