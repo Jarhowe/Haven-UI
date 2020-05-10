@@ -17,6 +17,9 @@ export default {
     div[class*="language-"] {
         border-radius: 0;
         background-color: #fafafa;
+        .token.operator, .token.entity, .token.url {
+            color: #55aee4;
+        }
         .token.tag, .token.attr-name, .token.namespace, .token.deleted, .token.punctuation {
             color: #3182bd;
         }
@@ -24,7 +27,7 @@ export default {
             color: #756bb1;
         }
         code {
-            color: #000000;
+            color: #55aee4;
         }
     }
     .theme-default-content pre, 

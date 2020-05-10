@@ -19,7 +19,7 @@
 </template>
 <template #component-code>
 
-```vue
+```javascript
 <ha-button>默认按钮</ha-button>
 <ha-button type="primary">主要按钮</ha-button>
 <ha-button type="success">成功按钮</ha-button>
@@ -49,7 +49,7 @@
 </template>
 <template #component-code>
 
-```vue
+```javascript
 <ha-button disabled>默认按钮</ha-button>
 <ha-button type="primary" disabled>主要按钮</ha-button>
 <ha-button type="success" disabled>成功按钮</ha-button>
@@ -78,7 +78,7 @@
 </template>
 <template #component-code>
 
-```vue
+```javascript
 <ha-button type="text">文字按钮</ha-button>
 <ha-button type="text" disabled>文字按钮</ha-button>
 <ha-button type="text" size="medium">文字按钮</ha-button>
@@ -107,7 +107,7 @@
 </template>
 <template #component-code>
 
-```vue
+```javascript
 <ha-button>默认按钮</ha-button>
 <ha-button size="medium">中等按钮</ha-button>
 <ha-button size="small">小型按钮</ha-button>

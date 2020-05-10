@@ -1,6 +1,7 @@
 // row
 export default {
     name: 'haRow',
+    componentName: 'HaRow',
     props: {
         // 渲染成html的标签, 默认div
         tag: {

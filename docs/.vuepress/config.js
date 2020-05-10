@@ -36,7 +36,8 @@ module.exports = {
                 title: '基本组件',
                 collapsable: false,
                 children: [
-                    '/views/components/basic/button'
+                    '/views/components/basic/button',
+                    '/views/components/basic/layout'
                 ]
             }
         ]

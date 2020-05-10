@@ -1,0 +1,21 @@
+@charset "UTF-8";
+@import "../common/var";
+@import "../common/mixins";
+
+
+// [attribute*=value] 选择器
+[class*="ha-col-"] {
+    float: left;
+    box-sizing: border-box;
+}
+
+.ha-col-0 {
+    display: none;
+}
+
+
+@for $i from 0 through 24 {
+    .ha-col-#{$i} {
+        width: (1 / 24 * $i * 100) * 1%;
+    }
+}
