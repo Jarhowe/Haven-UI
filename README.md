@@ -21,26 +21,23 @@
 
 
 ## 简介
-<p align="center">
-    Haven-UI组件库文档，它基于vuepress实现。它仿照了element-ui文档，实现了组件展示，代码显示等。
+<p>
+Haven-UI组件库文档，它基于vuepress实现。它仿照了element-ui文档，实现了组件展示，代码显示、组件说明等。
 </p>
 
 **如果你喜欢这个项目欢迎[star!](https://github.com/Jarhowe/Haven-UI)或者有任何使用问题和bug，欢迎提出[issue和pr](https://github.com/Jarhowe/Haven-UI/issues)**
 - [Github地址](https://github.com/Jarhowe/Haven-UI)
-- [演示地址](https://jarhowe.github.io/Haven-UI/)
+- [组件文档地址](https://jarhowe.github.io/Haven-UI/)
 
 
 ## 安装
-**克隆项目**        
-`git clone https://github.com/Jarhowe/Haven-UI.git`
+```
+npm install haven-ui -S
+```
 
-**进入项目目录**        
-`cd Haven-UI`
-
-**使用npm或者yarn安装依赖**        
-`npm install`
-
-**启动文档预览**        
-`npm run docs:dev`
-
-浏览器访问 http://localhost:8080
+## 使用
+```
+import Vue from 'vue'
+import Haven from 'haven-ui'
+Vue.use(Haven)
+```

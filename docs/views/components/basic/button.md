@@ -6,11 +6,13 @@
 <demo-block>
 <template #demo-title>基础按钮</template>
 <template #component-body>
-    <ha-button>默认按钮</ha-button>
-    <ha-button type="primary">主要按钮</ha-button>
-    <ha-button type="success">成功按钮</ha-button>
-    <ha-button type="warning">警告按钮</ha-button>
-    <ha-button type="danger">取消按钮</ha-button>
+    <ha-row>
+        <ha-button>默认按钮</ha-button>
+        <ha-button type="primary">主要按钮</ha-button>
+        <ha-button type="success">成功按钮</ha-button>
+        <ha-button type="warning">警告按钮</ha-button>
+        <ha-button type="danger">取消按钮</ha-button>
+    </ha-row>
 </template>
 <template #component-remark>
     <div class="description">
@@ -20,11 +22,13 @@
 <template #component-code>
 
 ```javascript
-<ha-button>默认按钮</ha-button>
-<ha-button type="primary">主要按钮</ha-button>
-<ha-button type="success">成功按钮</ha-button>
-<ha-button type="warning">警告按钮</ha-button>
-<ha-button type="danger">取消按钮</ha-button>
+<ha-row>
+    <ha-button>默认按钮</ha-button>
+    <ha-button type="primary">主要按钮</ha-button>
+    <ha-button type="success">成功按钮</ha-button>
+    <ha-button type="warning">警告按钮</ha-button>
+    <ha-button type="danger">取消按钮</ha-button>
+</ha-row>
 ```
 </template>
 </demo-block>
@@ -36,11 +40,13 @@
 <demo-block>
 <template #demo-title>禁用状态</template>
 <template #component-body>
-    <ha-button disabled>默认按钮</ha-button>
-    <ha-button type="primary" disabled>主要按钮</ha-button>
-    <ha-button type="success" disabled>成功按钮</ha-button>
-    <ha-button type="warning" disabled>警告按钮</ha-button>
-    <ha-button type="danger" disabled>取消按钮</ha-button>
+    <ha-row>
+        <ha-button disabled>默认按钮</ha-button>
+        <ha-button type="primary" disabled>主要按钮</ha-button>
+        <ha-button type="success" disabled>成功按钮</ha-button>
+        <ha-button type="warning" disabled>警告按钮</ha-button>
+        <ha-button type="danger" disabled>取消按钮</ha-button>
+    </ha-row>
 </template>
 <template #component-remark>
     <div class="description">
@@ -50,11 +56,13 @@
 <template #component-code>
 
 ```javascript
-<ha-button disabled>默认按钮</ha-button>
-<ha-button type="primary" disabled>主要按钮</ha-button>
-<ha-button type="success" disabled>成功按钮</ha-button>
-<ha-button type="warning" disabled>警告按钮</ha-button>
-<ha-button type="danger" disabled>取消按钮</ha-button>
+<ha-row>
+    <ha-button disabled>默认按钮</ha-button>
+    <ha-button type="primary" disabled>主要按钮</ha-button>
+    <ha-button type="success" disabled>成功按钮</ha-button>
+    <ha-button type="warning" disabled>警告按钮</ha-button>
+    <ha-button type="danger" disabled>取消按钮</ha-button>
+</ha-row>
 ```
 </template>
 </demo-block>
@@ -65,11 +73,13 @@
 <demo-block>
 <template #demo-title>文字按钮</template>
 <template #component-body>
+<ha-row>
     <ha-button type="text">文字按钮</ha-button>
     <ha-button type="text" disabled>文字按钮</ha-button>
     <ha-button type="text" size="medium">文字按钮</ha-button>
     <ha-button type="text" size="small">文字按钮</ha-button>
     <ha-button type="text" size="mini">文字按钮</ha-button>
+</ha-row>
 </template>
 <template #component-remark>
     <div class="description">
@@ -79,11 +89,13 @@
 <template #component-code>
 
 ```javascript
-<ha-button type="text">文字按钮</ha-button>
-<ha-button type="text" disabled>文字按钮</ha-button>
-<ha-button type="text" size="medium">文字按钮</ha-button>
-<ha-button type="text" size="small">文字按钮</ha-button>
-<ha-button type="text" size="mini">文字按钮</ha-button>
+<ha-row>
+    <ha-button type="text">文字按钮</ha-button>
+    <ha-button type="text" disabled>文字按钮</ha-button>
+    <ha-button type="text" size="medium">文字按钮</ha-button>
+    <ha-button type="text" size="small">文字按钮</ha-button>
+    <ha-button type="text" size="mini">文字按钮</ha-button>
+</ha-row>
 ```
 </template>
 </demo-block>
@@ -95,10 +107,12 @@
 <demo-block>
 <template #demo-title>不同尺寸</template>
 <template #component-body>
+<ha-row>
     <ha-button>默认按钮</ha-button>
     <ha-button size="medium">中等按钮</ha-button>
     <ha-button size="small">小型按钮</ha-button>
     <ha-button size="mini">超小按钮</ha-button>
+</ha-row>
 </template>
 <template #component-remark>
     <div class="description">
@@ -108,10 +122,12 @@
 <template #component-code>
 
 ```javascript
-<ha-button>默认按钮</ha-button>
-<ha-button size="medium">中等按钮</ha-button>
-<ha-button size="small">小型按钮</ha-button>
-<ha-button size="mini">超小按钮</ha-button>
+<ha-row>
+    <ha-button>默认按钮</ha-button>
+    <ha-button size="medium">中等按钮</ha-button>
+    <ha-button size="small">小型按钮</ha-button>
+    <ha-button size="mini">超小按钮</ha-button>
+</ha-row>
 ```
 </template>
 </demo-block>
@@ -123,6 +139,17 @@
 | :-----| :---- | :---- | :---- | :---- |
 | type | String | 类型 | primary、success、warning、danger、text | -
 | size | String | 大小 | medium、small、mini | -
-| disabled | Boolean | 禁用 | | false
+| disabled | Boolean | 禁用 | - | false
 | native-type | String | 原生 type 属性 | button、submit、reset |button
-| autofocus | Boolean | 页面加载时给按钮自动获取焦点 | | false
+| autofocus | Boolean | 页面加载时给按钮自动获取焦点 | - | false
+
+
+
+
+
+<style>
+[class*="ha-button_"]+[class*="ha-button_"] {
+    margin-left: 10px
+}
+
+</style>

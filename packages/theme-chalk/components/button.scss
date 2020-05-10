@@ -74,6 +74,20 @@
     }
 }
 
+// ---- size ----
+@include tiedName(button_medium) {
+    @include setButtonSize($default-size-medium-padding, $default-size-medium-fontSize);
+    border-radius: 4px;
+}
+@include tiedName(button_small) {
+    @include setButtonSize($default-size-small-padding, $default-size-small-fontSize);
+    border-radius: 3px;
+}
+@include tiedName(button_mini) {
+    @include setButtonSize($default-size-mini-padding, $default-size-mini-fontSize);
+    border-radius: 3px;
+}
+
 // ---- type ----
 // button_primary
 @include tiedName(button_primary) {
@@ -110,18 +124,4 @@
         border-color: transparent;
         background-color: transparent;
     }
-}
-
-// ---- size ----
-@include tiedName(button_medium) {
-    @include setButtonSize($default-size-medium-padding, $default-size-medium-fontSize);
-    border-radius: 4px;
-}
-@include tiedName(button_small) {
-    @include setButtonSize($default-size-small-padding, $default-size-small-fontSize);
-    border-radius: 3px;
-}
-@include tiedName(button_mini) {
-    @include setButtonSize($default-size-mini-padding, $default-size-mini-fontSize);
-    border-radius: 3px;
 }

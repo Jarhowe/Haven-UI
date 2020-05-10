@@ -11,7 +11,7 @@
     "docs:build": "vuepress build docs",
     "deploy": "bash deploy.sh"
   },
-  "main": "lib/haven-ui.umd.min.js",
+  "main": "lib/haven-ui.common.js",
   "author": "Jarhowe",
   "license": "MIT",
   "dependencies": {
